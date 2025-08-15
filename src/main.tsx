@@ -1,9 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
-import { LoginPage } from './pages/LoginPage/index.tsx'
-import { DashboardPage } from './pages/DashboardPage/index.tsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
+import { LoginPage } from './pages/LoginPage/index.tsx';
+import { DashboardPage } from './pages/DashboardPage/index.tsx';
+import { ProtectedRoute } from './components/ProtectedRoute/index.tsx';
+import './index.css';
 
 const router = createBrowserRouter([
   {
@@ -15,12 +16,18 @@ const router = createBrowserRouter([
     element: <LoginPage />,
   },
   {
-    path: '/dashboard',
-    element: <DashboardPage />,
-  },
-  {
-    path: '*',
-    element: <Navigate to="/login" replace />,
+    path: '/',
+    element: <ProtectedRoute />,
+    children: [
+      {
+        path: '/dashboard',
+        element: <DashboardPage />,
+      },
+      {
+        path: '*',
+        element: <Navigate to="/login" replace />,
+      }
+    ]
   }
 ]);
 
