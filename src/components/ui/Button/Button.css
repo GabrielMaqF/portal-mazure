@@ -1,0 +1,26 @@
+.custom-button {
+  width: 100%;
+  background-color: #007BFF;
+  color: white;
+  padding: 12px; /* Um pouco mais de altura */
+  border: none;
+  border-radius: 6px; /* Bordas um pouco mais arredondadas */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600; /* Texto em negrito */
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+  /* Efeito de elevação ao passar o mouse */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.custom-button:disabled {
+  background-color: #a0cffc;
+  cursor: not-allowed;
+  transform: translateY(0);
+  box-shadow: none;
+}

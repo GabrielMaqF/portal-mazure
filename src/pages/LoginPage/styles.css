@@ -1,0 +1,45 @@
+.login-container {
+  background: #ffffff;
+  padding: 40px; /* Mais preenchimento para um visual mais limpo */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Aumenta o espaço entre os elementos */
+  border-top: 4px solid #007BFF; /* Detalhe em azul no topo */
+}
+
+.login-container h2 {
+  text-align: center;
+  margin: 0 0 10px 0;
+  color: #1c3d5a; /* Um azul escuro para o título */
+  font-size: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Espaço entre o label e o input */
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #4a5568; /* Cinza escuro para os labels */
+  font-weight: 600;
+}
+
+.links {
+  text-align: right;
+  font-size: 13px;
+}
+
+.links a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
